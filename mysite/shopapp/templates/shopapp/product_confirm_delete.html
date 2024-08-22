@@ -1,0 +1,24 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    Confirm arhive {{ object.name }}
+{% endblock %}
+
+{% block body %}
+    <h1>Are you sure you want to arhive {{ object.name }} ?</h1>
+    <br>
+    <div>
+        <a href="{% url 'shopapp:product_details' pk=object.pk %}">Back to product</a>
+    </div>
+    <div>
+        <a href="{% url 'shopapp:product_delete' pk=object.pk %}"></a>
+    </div>
+    <br>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Arhive</button>
+        </form>
+    </div>
+{% endblock %}

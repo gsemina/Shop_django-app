@@ -1,0 +1,26 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+    Welcome to ShopApp
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="container p-5 bg-primary-subtle text-primary-emphasis border border-primary">
+        <nav class="navbar navbar-light bg-light " >
+            <div class="container-fluid" >
+                <h1 >Welcome to ShopApp</h1>
+                <form class="container-fluid" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary " type="submit" >LOGIN</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+{% endblock %}

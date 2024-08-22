@@ -1,0 +1,38 @@
+{% extends 'shopapp/base.html' %}
+{% load cache %}
+{% block title %}
+    User orders
+{% endblock %}
+
+{% block body %}
+    <h1 style="margin-left: 30px">Список заказов: </h1><br>
+    <div class="inline-block" style="margin-left: 30px" >
+        {% if owner.pk == request.user.pk %}
+            {% if owner.order_set %}
+                <h2>Пользователь {{ owner.username }} выполнил следующие заказы: </h2>
+                <br>
+                <div style="margin-left: 30px" >
+                    {% cache 200 user_orders owner.username %}
+                        {% for order in object_list %}
+                            <p style="text-decoration: underline">Details: {{ order.pk }}</p>
+                            <p>Address: {{ order.delivery_address }}</p>
+                            <p><b>Products in order: </b></p>
+                                <ul>
+                                    {% for product in order.products.all %}
+                                        <li>{{ product.name }} for {{ product.price }}</li>
+                                    <br>
+                                    {% endfor %}
+                                </ul>
+                        {% endfor %}
+                    {% endcache %}
+                </div>
+            {% else %}
+                <div>
+                    <h2>У пользователя {{ owner.username }}  ещё нет заказов</h2>
+                </div>
+            {% endif %}
+        {% else %}
+            <h2>Войдите под своим логином, чтобы посмотреть заказы</h2>
+        {% endif %}
+    </div>
+ {% endblock %}

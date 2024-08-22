@@ -1,0 +1,223 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 3,
+    "fields": {
+      "name": "Laptop",
+      "description": "",
+      "price": "679.00",
+      "discount": 16,
+      "created_at": "2024-05-15T10:49:10.283Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 4,
+    "fields": {
+      "name": "Desktop",
+      "description": "",
+      "price": "2599.00",
+      "discount": 10,
+      "created_at": "2024-05-15T10:49:10.283Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Smartphone",
+      "description": "fffffffffffffffffffffffffffffffffffffffffffffffffffhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "price": "987.00",
+      "discount": 10,
+      "created_at": "2024-05-15T10:49:10.283Z",
+      "archived": false,
+      "preview": "products/product_5/preview/7204.jpg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "Polermo",
+      "description": "fkfl",
+      "price": "255.00",
+      "discount": 12,
+      "created_at": "2024-05-30T13:30:22.772Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "Apple",
+      "description": "fg",
+      "price": "120.00",
+      "discount": 55,
+      "created_at": "2024-06-19T10:55:02.552Z",
+      "archived": false,
+      "preview": "products/product_9/preview/appple_jsOJ035.jpeg"
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "name": "DVB",
+      "description": "",
+      "price": "1200.00",
+      "discount": 15,
+      "created_at": "2024-06-19T12:44:26.853Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 11,
+    "fields": {
+      "name": "DVB",
+      "description": "",
+      "price": "1200.00",
+      "discount": 15,
+      "created_at": "2024-06-19T12:53:11.623Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 12,
+    "fields": {
+      "name": "DVB",
+      "description": "",
+      "price": "1200.00",
+      "discount": 15,
+      "created_at": "2024-06-19T12:59:02.857Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 13,
+    "fields": {
+      "name": "DVB",
+      "description": "",
+      "price": "1200.00",
+      "discount": 15,
+      "created_at": "2024-06-19T13:04:24.467Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 14,
+    "fields": {
+      "name": "Lilia",
+      "description": "",
+      "price": "222.00",
+      "discount": 22,
+      "created_at": "2024-06-19T13:53:57.375Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 15,
+    "fields": {
+      "name": "Lipa",
+      "description": "",
+      "price": "1.00",
+      "discount": 0,
+      "created_at": "2024-06-19T14:00:50.633Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 16,
+    "fields": {
+      "name": "lipa",
+      "description": "",
+      "price": "11111.00",
+      "discount": 0,
+      "created_at": "2024-06-19T14:02:04.108Z",
+      "archived": true,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 17,
+    "fields": {
+      "name": "Lilia",
+      "description": "",
+      "price": "42222.00",
+      "discount": 15,
+      "created_at": "2024-06-20T13:22:39.016Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 18,
+    "fields": {
+      "name": "Olalla",
+      "description": "",
+      "price": "145.00",
+      "discount": 5,
+      "created_at": "2024-06-21T08:13:42.604Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 19,
+    "fields": {
+      "name": "Smartphone 1",
+      "description": "",
+      "price": "1000.00",
+      "discount": 10,
+      "created_at": "2024-08-02T11:14:36.429Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 20,
+    "fields": {
+      "name": "Smartphone 2",
+      "description": "",
+      "price": "2000.00",
+      "discount": 10,
+      "created_at": "2024-08-02T11:14:36.429Z",
+      "archived": false,
+      "preview": ""
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 21,
+    "fields": {
+      "name": "Smartphone 3",
+      "description": "",
+      "price": "3000.00",
+      "discount": 10,
+      "created_at": "2024-08-02T11:14:36.429Z",
+      "archived": false,
+      "preview": ""
+    }
+  }
+]

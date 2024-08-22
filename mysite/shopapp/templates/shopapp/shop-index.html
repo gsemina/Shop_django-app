@@ -1,0 +1,39 @@
+{% extends 'shopapp/base.html' %}
+{% load cache %}
+
+{% block title %}
+    Shop Index
+{% endblock %}
+
+
+{% block body %}
+    <h1>Hellow Shop Index!</h1>
+    <div>
+        <ul>
+            {% for name, price in products %}
+            <li>
+                {{ name }} for $ {{ price }}
+                {{ name|length_is:'7' }}
+            </li>
+            {% empty %}
+            No products
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div>
+        <strong>
+            You have {{ items }} cherr{{ items|pluralize:"y,ies" }}
+        </strong>
+    </div>
+    <br>
+    <div >
+        Time running: {{time_running}},
+    </div>
+    <br>
+    {% cache 100 lorem %}
+        <div>
+            {% lorem 3 p random %}
+        </div>
+    {% endcache %}
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+    User list
+{% endblock %}
+
+
+{% block body %}
+    <h1>Список пользователей: </h1>
+    <div style="margin-left: 100px">
+        {% if user.is_authenticated %}
+            {% for us in users %}
+                {% if us.profile %}
+
+                    <h3>Detail: <strong>{% firstof us.first_name us.username %}</strong></h3>
+
+                    {% if us.profile.avatar %}
+                        <img style="width: 200px " src="{{ us.profile.avatar.url }}" alt="{{ us.profile.avatar.name }}">
+                    {% else %}
+                        <div style="color: red">Avatar not loaded</div>
+                    {% endif %}
+                    <p><a href="{% url 'myauth:about-user' us.profile.user_id %}">Username: {{ us.username }}</a></p>
+                    <p>First name: {{ us.first_name }}</p>
+                    <p>Last name: {{ us.last_name }}</p>
+                    <p>Email: {{ us.email }}</p>
+                    <p>Bio: {{ us.profile.bio }}</p>
+                    <p>ID profile: {{ us.profile.id }}</p>
+                    <p>ID user: {{ us.id }}</p>
+
+
+                    {% if user == us or user.is_superuser  %}
+                        <div>
+                            <a href="{% url 'myauth:update-profile' us.profile.user_id %}">Update profile</a>
+                        </div>
+                    {% endif %}
+                {% endif %}
+                <br>
+            {% endfor %}
+
+        {% endif %}
+    </div>
+
+{% endblock %}

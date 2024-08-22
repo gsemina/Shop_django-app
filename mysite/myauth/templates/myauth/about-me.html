@@ -1,0 +1,59 @@
+{% extends  'myauth/base.html' %}
+{% load cache %}
+
+{% block title %}
+    About me
+{% endblock %}
+
+{% block body %}
+    <div class="container p-3  text-center>
+        <nav class="navbar navbar-light bg-light " >
+            <h1>Информация о пользователе:</h1>
+            <div>
+                Products available {% now "u" %}
+            </div>
+            <br>
+            {% if user.is_authenticated %}
+                {% cache 300 userinfo user.username %}
+                    {% if user.profile.avatar %}
+                        <div>
+                            <img src="{{ user.profile.avatar.url }}"  style="width: 50px">
+                            <br>
+                        </div>
+                    {% else %}
+                        <div style="color: red">Avatar not loaded</div>
+                        <br>
+                    {% endif %}
+                    <h2><strong>{% firstof user.first_name user.username %}</strong></h2>
+                        <div class="container bg-primary-subtle ">
+                            <p>Username: <strong>{{user.username}}</strong></p>
+                            <p>First name: {{user.first_name}}</p>
+                            <p>Last name: {{user.last_name}}</p>
+                            <p>Email: {{user.email}}</p>
+                            <p>Биография: {{user.profile.bio}}</p>
+                            <p>ID: {{user.id }}</p>
+                        </div>
+
+                        <div class="container">
+                            <a href="{% url 'myauth:update-profile' user.id %}">Update Profile</a>
+                            <div>
+                                <a href="{% url 'myauth:user-list' %}">List of users</a>
+                            </div>
+
+                        </div>
+                {% endcache %}
+            {% else %}
+                <h2>Вы не авторизованы. <br>Пройдите авторизацию или зарегистрируйтесь.</h2>
+                <br>
+                <div class="container-fluid" >
+                    <form class="container-fluid" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-primary " type="submit" >LOGIN</button>
+                        <button class="btn btn-success " type="submit" >Register</button>
+                    </form>
+                </div>
+            {% endif %}
+    </div>
+
+{% endblock %}
